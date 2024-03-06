@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	 <form name="myname1"id="admin" class="input-group-admin" action="file:///C:/Users/priya/Desktop/AS/shiva/party.html" onsubmit="return validateform()">
+	 	            <h1>Admin Login</h1>
+	 	          
+					<input type="text" class="input-field1" placeholder="Enter the Username" name="class11">
+					<input type="password" class="input-field1" placeholder="Enter the password" name="class12">
+					<!-- <input type="checkbox" class="check" name=""> -->
+					<!-- <span>Remember me<a href="file:///C:/Users/priya/Desktop/AS/shiva/h11.html">Forget Password</a></span> -->
+					<br><br>
+					<button type="submit" class="submitbtn">Login</button>
+     </form>
+</body>
+<style type="text/css">
+	#admin{
+	left: 650px;
+	top: 250px;
+}
+#admin input{
+	color: black;
+	font-size: 15;
+}
+.input-group-admin{
+	 top: 100px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field1{
+	width: 100%;
+	padding: 10px 0;
+	margin: 3px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	 border-right: 0;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+
+}
+.submitbtn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #F3C693;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+h1{
+	margin-left: 35px;
+}
+body form
+{
+ border: 1px solid;
+ padding: 25px;
+}
+*{
+	background-image: url('https://wallpaperset.com/w/full/f/6/0/544334.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+<script type="text/javascript">
+	function validateform() {
+		// body...
+	
+	var x=document.forms["myname1"]["class11"].value;
+	var y=document.forms["myname1"]["class12"].value;
+
+	if (x=="") {
+		alert("please enter the username");
+		return false;
+	}
+	else if (y=="") {
+		alert("please enter the password");
+		return false;
+	}
+	else{
+	return true;
+}
+}
+</script> 
+</html>

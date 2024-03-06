@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Invoice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <Style>
+            *{
+                margin-left: 100px;
+            }
+            h1{
+                text-align: center;
+            }
+            label,select{
+                font-size: large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: blue;
+            }
+            #bill{
+                font-size: 40px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: green;
+            }
+            #hrs{
+                font-size: 40px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: green;
+            }
+            body{
+                justify-content: center;
+            }
+            #etime.edate{
+                            float: right;
+            }
+            
+        </Style>
+    </head>
+    <body>
+     
+        <h1>Heaven Restaurant Party Halls</h1>
+        <label>Booked hall:
+            <select id="halls" type="dropdown" style="margin-top: 200px;">
+            <option><li>select</li></option>	
+            <option><li>4 Seater-----2999/hr</li></option>
+           <option><li>8 Seater-----8999/hr</li></option>
+           <option><li>30 Seater-----9999/hr</li></option>
+            </select>
+        </label>
+        <form name="dte" action="#" onsubmit="return validateForm()" method="post">
+             
+        <p>Invoice date & Time</p>
+                <input type="datetime-local" id="date" name="date">
+                  <p>Reserved date & Time</p>
+                <input type="datetime-local" id="date" name="date">
+                </form>
+        <h3>Reserved Time</h3>
+        <p>Start time:</p>
+        <input type="time" id="time" name="time"> <br> <br>
+        <p>End time:</p>
+        <input type="time" id="etime" name="time"> <br>  <br>
+        <input type="button" name="clickbtn" value="TOTAL" onclick=" return add_number()">
+        <p id="hrs" style="color: green;"></p>
+  
+
+            <!-- <div>
+            
+            </div> <br> <br> -->
+            
+            <b>PRICE</b>: <br>
+            <input type="text" id="price" name="TextBox1">
+            <br>
+            <b>HOURS</b>: <br>
+            <input type="text" id="hours" name="TextBox2">
+            <br> <br>
+            <input type="button" name="clickbtn" value="TOTAL" onclick=" return mul_number()">
+            <p id="bill"></p>
+    </body> 
+        <script>
+           function add_number() {
+  var first_number = parseInt(document.getElementById("time").value);
+  var second_number = parseInt(document.getElementById("etime").value);
+  var result =  second_number - first_number;  
+document.getElementById("hrs").innerHTML= "<br> Total hours: "+result;
+           }
+
+           function mul_number() {
+   let x = (document.getElementById("halls").value);
+  var first_number = parseInt(document.getElementById("price").value);
+  var second_number = parseInt(document.getElementById("hours").value);
+  var result =  second_number * first_number;  
+document.getElementById("bill").innerHTML= "<br> Total Amount: "+result;
+
+if (x==""){
+    alert("please select hall");
+    return false;
+}
+else {
+    return true;
+}
+
+}
+        </script>
+        </html>

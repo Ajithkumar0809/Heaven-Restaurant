@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Responsive Contact Us Page</title>
+</head>
+    <style>
+      sonu{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins',sans-serif;
+      }
+      .contact{
+        position: relative;
+        min-height: 100px;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+
+        background-size:cover;
+      }
+      .contact .content
+      {
+        max-width: 800px;
+        text-align: center;
+      }
+      .contact .content h2 
+      {
+        font-size: 40px;
+        font-weight: 500;
+        color:white;
+      }
+      .contact .content p
+      {
+        font-weight: 600;
+        font-size:23px;
+        color:white;
+      }
+      .container
+      {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .container  .contactInfo
+      {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .container .contactInfo .box
+      {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+      }
+      .container .contactInfo .box .icon
+      {
+        min-width: 60px;
+        height: 60px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 25px;
+      }
+      .container .contactInfo .box .text
+      {
+        display: flex;
+        margin-left: 20px;
+        font-size: 18px;
+        color: #33ccff;
+        flex-direction: column;
+        font-weight: 300;
+      }
+      .container .contactInfo .box .text h3
+      {
+        font-weight: 500;
+        color: #33ccff;
+      }
+      .contactForm
+      {
+        width: 40%;
+        padding: 40px;
+        background:#66b3ff;
+      }
+      .contactForm h2
+      {
+        font-size: 30px;
+        color: white;
+        font-weight: 500;
+      }
+      .contactForm .inputBox
+      {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .contactForm .inputBox input .contactForm .inputBox textarea
+      {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid black;
+        outline:none;
+        resize :none;
+      }
+      .contactForm .inputBox span
+      {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s;
+        color: goldenrod;
+      }
+      .contactForm .inputBox input:focus ~ span
+      .contactForm .inputBox input:valid ~ span
+      .contactForm .inputBox textarea:focus ~ span
+      .contactForm .inputBox textarea:valid ~ span
+      {
+        color: black;
+        font-size: 12px;
+        transform: translateY(-20px)
+      }
+      .contactForm .inputBox input[type="submit"]
+      {
+        width: 80px;
+        background:darkblue;
+        color:white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        
+      }
+     
+
+
+h1{
+font-size:45px;
+color:orangered;
+text-shadow:2px 5px  3px rebeccapurple;
+} 
+#devi{
+font-size:50px;
+color:navy;
+}
+#priya{
+font-size:50px;
+color:red;
+}
+#bunny{
+font-size:50px;
+color:navy;
+}
+#dev{
+font-size:50px;
+color:#e1306c;
+}
+  h2{
+color:black;
+font-size:40px;
+font-style:italic;
+text-shadow:2px 5px  3px plum;
+}  
+
+    </style>
+    
+<body>
+  <section class="contact">
+    <div class="content">
+      <h1>Contact Us</h1>
+      <p>For Any Queries you can go through this..</p>
+    </div>
+    <div class="container">
+      <div class="contactInfo">
+        <div class="box">
+          <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+          <div class="text">
+            <h3>Adress</h3>
+           <p style="color:red;" >Heaven Restaurant</p>Neeladri road<br>
+            Electronic City<br>Bangalore
+          </div>
+        </div>
+        <div class="box">
+          <div class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+          <div class="text">
+            <h3>Phone</h3>
+            9951837935
+          </div>
+       </div>
+       <div class="box">
+         <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+         <div class="text">
+           <h3>Email</h3>
+          heavenrestaurant@gmail.com<br><br><br><br><br>
+
+          </div>
+        </div>
+    </div><br><br>
+    <div class="contactForm">
+      <form target="_blanck" onsubmit="return Contact()">
+        <center><h1>Send Message</h1></center>
+
+         <!-- <h3 font-size:23px"> -->
+          <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required="required" ><br><br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required="required"><br><br>
+        
+          
+         <label for="email">Email</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+       <input type="text" id="email" name=""  placeholder="Email-Id!.." required="required"><br><br>
+
+          
+          <span>Type your Message....</span><br><br>
+       <textarea required="required"></textarea>
+        
+        <div class="inputBox">
+<input type="submit" name="" value="Send">
+</div>
+    </form>
+    </div>
+  </div><br><br>
+<center><h2>Connect with us for Delicious Food!...<br><br><br><a href="https://www.facebook.com/Nunnadevi09"><i id="devi" class="fa fa-facebook"></i></a> &nbsp&nbsp&nbsp<a href="https://youtube.com/channel/UCHheuqrPM1mJJMA_mlr4E6w"><i id="priya" class="fa fa-youtube"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="https://twitter.com/CareerProspect2?s=09"><i id="bunny" class="fa fa-twitter"></i></a>&nbsp&nbsp&nbsp<a href="https://instagram.com/infotechofficial2021?utm_medium=copy_link"><i id="dev" class="fa fa-instagram"></i></a></center>
+
+        
+</section><br>
+<script>
+  function Contact(){
+    let fname=document.getElementById("fname").value;
+    let lname=document.getElementById("lname").value;
+    let email=document.getElementById("email").value;
+   
+    alert("Contact details send sucessfully");
+    return;
+  }
+
+</script>
+  
+  
+
+
+</body>
+
+</html>

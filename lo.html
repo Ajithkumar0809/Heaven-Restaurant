@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heaven</title>
+	<link rel="stylesheet" type="text/css" href="href.css">
+	<link rel="icon" type="image/x-icon" href="https://images-platform.99static.com//bEmcCMXlHY0aiCmZeFcbP1Eo_ys=/434x155:1567x1288/fit-in/500x500/99designs-contests-attachments/99/99964/attachment_99964030">
+</head>
+<body>
+    
+	<div class="full">
+		<div class="navbar">
+			<div>
+				<a href=""><h1  style="font-size: 3em;margin-left: 300px; color: white;font-family: sans-serif;">Heaven Restaurant</h1></a>
+				
+			</div>
+
+			<nav>
+				<ul id="menu">
+				 <!-- <li><a href="">HOME</a></li>
+					<li><a href="">About Us</a></li>
+					<li><a href="">SERVICES</a></li> -->
+					<!-- <li><a href="">Gmap</a></li>  -->
+						<li><a href="file:///C:/Users/priya/Desktop/AS/shiva/admin.html">Admin</a></li>
+					<li><button class="login1" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+					<!-- <li><button class="login1" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Admin</button></li> -->
+				</ul>
+			</nav>
+		</div>
+		<div id="login-form" class="login-page">
+			<div class="form-box">
+				<div class="button-box">
+					<div id="btn"></div>
+					<!-- <button type="button" onclick="admin()" class="toggle">Admin</button> -->
+					<button type="button" onclick="login()" class="toggle">Log In</button>
+					<button type="button" onclick="register()" class="toggle">Register </button>
+
+				</div>
+				
+				
+				<form name="myname"id="login" class="input-group-login" action="file:///C:/Users/priya/Desktop/AS/shiva/tan.html" onsubmit="return validateform()">
+					<input type="email" class="input-field" placeholder="Enter the Email" name="class1">
+					<input type="password" class="input-field" placeholder="Enter the password" name="class2">
+					<input type="checkbox" class="check" name="">
+					<span>Remember me<a href="file:///C:/Users/priya/Desktop/AS/shiva/h11.html">Forget Password</a></span>
+					<button type="submit" class="submitbtn">Log in</button>
+				</form>
+                <form name="name1" id="register" class="input-group-register" action="" onsubmit="return validate()">
+					<input type="text" class="input-field" placeholder="First Name" name="fname">
+					<input type="text" class="input-field" placeholder="Last Name" name="fname2">
+					<input type="email" class="input-field" placeholder="Enter the email" name="fname3">
+					<input type="password" class="input-field" placeholder="Enter the new password" name="fname4">
+					<input type="password" class="input-field" placeholder="Conform password" name="fname5">
+					<!-- <input type="checkbox" class="check" name=""><span>I agree to the terms and conditions</span> -->
+					<br><br>
+					<button type="submit" class="submitbtn">Register</button>
+				</form>
+				</div>
+        
+		</div>
+	</div>
+     <script>
+     		// var a=document.getElementById('admin');
+     	var x=document.getElementById('login');
+     	var y=document.getElementById('register');
+     	var z=document.getElementById('btn');
+     	function register() {
+    
+     		x.style.left='-400px';
+     		y.style.left='50px';
+     		z.style.left='110px';
+     	}
+     	function login(){
+     	
+     		x.style.left='50px';
+     		y.style.left='450px';
+     		z.style.left='0px';	
+     	}
+      
+     	var modal=document.getElementById('login-form');
+     	window.onclick=function(event)
+     	{ 
+     		if (event.target==modal) 
+     		{
+     		  modal.style.display ="none";
+     		}
+     	}
+
+      </script>
+      <script type="text/javascript">
+     	 function validateform(){
+          	var x=document.forms["myname"]["class1"].value;
+          	var y=document.forms["myname"]["class2"].value;
+          	if (x=="") {
+          		alert("Please enter the EmailId");
+          		return false;
+          	}
+          	
+         
+          	else if (y=="") {
+          		alert("Please enter the Password");
+          		return false;
+          	}
+
+          	return true;
+          }
+     	
+     </script>
+          <script type="text/javascript">
+     	function validate() {
+     	 let x=document.forms["name1"]["fname"].value;
+     	  let y=document.forms["name1"]["fname2"].value;
+     	   let z=document.forms["name1"]["fname3"].value;
+     	    let a=document.forms["name1"]["fname4"].value;
+     	     let b=document.forms["name1"]["fname5"].value;
+
+     	 if(x==""){
+     	 	alert("please enter the Firstname");
+     	 	return false;
+     	 }
+     	 else if (y=="") {
+     	 	alert("Please enter the Lastname");
+     	 	return false;
+     	 }
+     	 else if (z=="") {
+     	 	alert("Please enter the Email id");
+     	 	return false;
+     	 }
+     	 else if (a=="") {
+     	 	alert("Please enter the New password");
+     	 	return false;
+     	 }
+     	 else if (b=="") {
+     	 	alert("please enter the Conform password");
+     	 	return false;
+     	 } if(a!=b){
+            alert("password & New Password not matching");
+            return false;
+           }
+           if(!/\S+@\S+\.\S+/.test(z)){
+            alert("Please enter valid e-mail-id");
+            return false;
+           }
+              else{ alert("Register is Successfully");
+             return true;
+          }
+
+     	}
+     
+     </script>
+    
+    	
+
+     
+</body>
+</html>
